@@ -20,7 +20,7 @@ public class AppFrameImpl extends AppFrameAbstract {
      */
     @Override
     public void initViewComponent() {
-        // test
+        // test two
         // 查看用户按钮
         IClickButton btn = new ClickButton(AppText.CLICK_SHOW_MEMBER.getValue());
         // 设置按钮监听名
