@@ -2,6 +2,7 @@ package com.dql.view.componet.impl;
 
 import com.dql.scheme.AppSize;
 import com.dql.scheme.AppText;
+import com.dql.scheme.AppTextEnglish;
 import com.dql.view.componet.IDialog;
 
 import javax.swing.*;
@@ -20,7 +21,7 @@ public class MemberDialog implements IDialog {
     @Override
     public void initDialog(JFrame mainFrame) {
         if (mainFrame == null) {
-            System.out.println(AppText.ERROR_LOG.getValue());
+            System.out.println(AppTextEnglish.ERROR_LOG.getValue());
             return;
         }
         dialog = new JDialog(mainFrame);

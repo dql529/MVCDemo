@@ -1,6 +1,7 @@
 package com.dql.view.impl;
 
 import com.dql.scheme.AppText;
+import com.dql.scheme.AppTextEnglish;
 import com.dql.view.AppFrameAbstract;
 import com.dql.view.componet.IClickButton;
 import com.dql.view.componet.IDialog;
@@ -28,14 +29,14 @@ public class AppFrameImpl extends AppFrameAbstract {
     private void initClickShowMember() {
 
         // 查看用户按钮
-        IClickButton btn = new ClickButton(AppText.CLICK_SHOW_MEMBER.getValue());
+        IClickButton btn = new ClickButton(AppTextEnglish.CLICK_SHOW_MEMBER.getValue());
         // 设置按钮监听名
-        btn.setListnerName(AppText.CLICK_SHOW_MEMBER_LISTENER.getValue());
+        btn.setListnerName(AppTextEnglish.CLICK_SHOW_MEMBER_LISTENER.getValue());
         // 添加按钮到序列
         this.componentPool.addClickButton(btn);
 
         // 按钮弹出框
-        IDialog dialogComponent = new MemberDialog("所有会员信息","展示会员会话");
+        IDialog dialogComponent = new MemberDialog("所有会员信息",AppTextEnglish.SHOW_DIALOG_TEXT.getValue());
         this.componentPool.addDialog(dialogComponent);
 
         // 展示会员表格

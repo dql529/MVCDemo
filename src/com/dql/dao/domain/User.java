@@ -5,16 +5,16 @@ package com.dql.dao.domain;
  */
 public class User {
     private String number = "";
-    private String nameOne = "";
+    private String firstName = "";
     private String nameTwo = "";
     private String date = "";
     private String sex = "";
     private String address = "";
     private String numberLast = "";
 
-    public User(String number, String nameOne, String nameTwo, String date, String sex, String address, String numberLast) {
+    public User(String number, String firstName, String nameTwo, String date, String sex, String address, String numberLast) {
         this.number = number;
-        this.nameOne = nameOne;
+        this.firstName = firstName;
         this.nameTwo = nameTwo;
         this.date = date;
         this.sex = sex;
@@ -30,12 +30,12 @@ public class User {
         this.number = number;
     }
 
-    public String getNameOne() {
-        return nameOne;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setNameOne(String nameOne) {
-        this.nameOne = nameOne;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getNameTwo() {

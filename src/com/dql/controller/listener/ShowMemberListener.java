@@ -4,6 +4,7 @@ import com.dql.controller.MyListener;
 import com.dql.dao.DataAccessor;
 import com.dql.dao.domain.User;
 import com.dql.scheme.AppText;
+import com.dql.scheme.AppTextEnglish;
 import com.dql.view.componet.ComponentPool;
 import com.dql.view.componet.IDialog;
 
@@ -25,12 +26,12 @@ public class ShowMemberListener extends MyListener {
      * 必须要实现接口名
      */
     public ShowMemberListener() {
-        this.setListenerName(AppText.CLICK_SHOW_MEMBER_LISTENER.getValue());
+        this.setListenerName(AppTextEnglish.CLICK_SHOW_MEMBER_LISTENER.getValue());
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        IDialog dialog = componentPool.dialogMap.get("展示会员会话");
+        IDialog dialog = componentPool.dialogMap.get(AppTextEnglish.SHOW_DIALOG_TEXT.getValue());
         dialog.setVisiable();
         JTable table = componentPool.tableMap.get("会员列表");
         // 定义弹出框内部按钮
@@ -38,7 +39,7 @@ public class ShowMemberListener extends MyListener {
         Object[] columnNames = {"姓名", "姓名"};
         List<User> userList = DataAccessor.getInstance().getUserList();
         // 表格所有行数据
-        List<String[]> collect = userList.stream().map(x -> new String[]{x.getNameOne(), x.getNameTwo()}).collect(Collectors.toList());
+        List<String[]> collect = userList.stream().map(x -> new String[]{x.getFirstName(), x.getNameTwo()}).collect(Collectors.toList());
         String[][] rowData = new String[userList.size()][2];
         for (int i = 0; i < rowData.length; i++) {
             rowData[i] = collect.get(i);
